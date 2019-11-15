@@ -1,0 +1,44 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: #ffffff;
+  box-shadow: 0 0 16px rgba($color: #262626, $alpha: 0.16);
+
+  @include for-size(desktop-up) {
+    padding: 0 81px;
+  }
+}
+
+.nav {
+  @include flexbox(space-between);
+  min-height: 72px;
+  padding: 0 8px;
+
+  @include for-size(desktop-up) {
+    padding: 0;
+  }
+}
+
+.nav__brand {
+  @include flexbox(center);
+}
+
+.nav__logo {
+  width: 115px;
+  height: 13px;
+}
+
+.authorization__button {
+  padding: 7px 20px;
+  color: $text-color-black;
+  font-weight: 500;
+  font-size: $font-smaller;
+  line-height: 24px;
+  background: none;
+  border: 1px solid $border-color;
+}
+
+.nav__basket {
+  display: none;
+}

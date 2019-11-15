@@ -1,0 +1,155 @@
+.main {
+  padding: 0 8px;
+
+  @include for-size(desktop-up) {
+    padding: 0 81px;
+  }
+}
+
+.main__search {
+  margin: 32px 0 28px;
+}
+
+.search-form__row {
+  border-bottom: 1px solid $border-input-color;
+}
+
+.search-form__input {
+  display: block;
+  width: 100%;
+  color: $text-color-black;
+  font-size: $font-regular;
+  background: none;
+  border: none;
+}
+
+.search-form__input::placeholder {
+  color: $font-input-color;
+  font-size: $font-regular;
+}
+
+.stores {
+  margin: 56px 0 48px;
+}
+
+.stores__title {
+  margin-bottom: 16px;
+  color: $text-color-black;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.stores__wrapper {
+  display: grid;
+  max-width: 450px;
+
+  @include push--auto;
+}
+
+.stores__item {
+  margin-bottom: 16px;
+  padding-bottom: 20px;
+}
+
+@include for-size(tablet-portrait-up) {
+  .stores__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    column-gap: 15px;
+  }
+}
+
+@include for-size(tablet-landscape-up) {
+  .stores__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+  }
+}
+
+.stores__image {
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+  min-height: 246px;
+  margin-bottom: 16px;
+}
+
+
+.store--macdonalds-image {
+  background: url("../images/stores/store-mac.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.store--dimsum-image {
+  background: url("../images/stores/store-dimsum.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.store--dvizok-image {
+  background: url("../images/stores/store-dvizok.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.store--nya-image {
+  background: url("../images/stores/store-nya.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.store--dzy-image {
+  background: url("../images/stores/store-dzy.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.store--cinnabon-image {
+  background: url("../images/stores/store-cinnabon.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.store--pizzelove-image {
+  background: url("../images/stores/store-pizzelove.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.store--zu-image {
+  background: url("../images/stores/store-zu.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.store--bar-image {
+  background: url("../images/stores/store-bar.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.stores__heading {
+  color: $text-color-black;
+  font-weight: normal;
+  font-size: $font-regular;
+  line-height: 24px;
+}
+
+.stores__description {
+  margin: 4px 0;
+  color: $text-color-gray;
+  font-weight: normal;
+  font-size: $font-small;
+  line-height: 21px;
+}
+
+.stores__kitchen {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.stores__kitchen::before {
+  display: inline-block;
+  margin-right: 5px;
+  content: "•";
+}
+
+.stores__time {
+  color: $text-color-black;
+  font-weight: normal;
+  font-size: $font-smaller;
+  line-height: 21px;
+}

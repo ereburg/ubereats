@@ -1,0 +1,34 @@
+footer.footer
+  .container
+    div(class="footer__brand") <svg class="footer__logo"><use xlink:href="images/sprite.svg#sp-white-logo"></use></svg>
+    nav(class="footer__nav")
+      div(class="info")
+        p(class="footer__brand-text")
+          span(class="footer__brand-tag") #
+          span(class="footer__brand-text") UberEats
+
+        ul(class="footer__list socials")
+          li: a(class="socials__link facebook" href="#") <svg class="socials__logo"><use xlink:href="images/sprite.svg#sp-facebook"></use></svg>
+          li: a(class="socials__link twitter" href="#") <svg class="socials__logo"><use xlink:href="images/sprite.svg#sp-twitter"></use></svg>
+          li: a(class="socials__link instagram" href="#") <svg class="socials__logo"><use xlink:href="images/sprite.svg#sp-instagram"></use></svg>
+
+      ul(class="footer__list")
+        li: a(class="footer__link" href="#") Об UberEats
+        li: a(class="footer__link" href="#") Станьте партнёром по доставке
+        li: a(class="footer__link" href="#") Станьте парнёром-рестораном
+      ul(class="footer__list")
+        li: a(class="footer__link" href="#") Все города
+        li: a(class="footer__link" href="#") Цены
+        li: a(class="footer__link" href="#") Помощь
+        li: a(class="footer__link" href="#") FAQs
+
+    div(class="apps")
+      picture(class="apps__image")
+        img(src="images/download-apple.png", alt="Скачайте в Apple Store")
+      picture(class="apps__image")
+        img(src="images/download-google.png", alt="Скачайте в Play Market")
+
+    ul(class="footer__copy")
+      li: span(class="footer__copyright") © 2017 Uber Technologies Inc.
+      li: a(class="footer__link" href="#") Обработка персональных данных
+      li: a(class="footer__link" href="#") Пользовательское соглашение
