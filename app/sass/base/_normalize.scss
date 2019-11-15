@@ -12,7 +12,7 @@ html {
   line-height: 1.15;
 
   /* 1 */
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 
   /* 2 */
 }
@@ -230,7 +230,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -343,12 +343,12 @@ textarea {
 
   /* 1 */
   outline-offset: -2px;
-  -webkit-appearance: textfield;
+  appearance: textfield;
 
   /* 2 */
 
   &::-webkit-search-decoration {
-    -webkit-appearance: none;
+    appearance: none;
   }
 }
 
@@ -365,7 +365,7 @@ textarea {
 
   /* 1 */
   font: inherit;
-  -webkit-appearance: button;
+  appearance: button;
 
   /* 2 */
 }

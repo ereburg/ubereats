@@ -3,6 +3,13 @@ footer.footer
     div(class="footer__brand") <svg class="footer__logo"><use xlink:href="images/sprite.svg#sp-white-logo"></use></svg>
     nav(class="footer__nav")
       div(class="info")
+        form(class="footer__form-select select")
+          p(class="footer__form-row")
+            <svg class="select__icon"><use xlink:href="images/sprite.svg#sp-world"></use></svg>
+            select(class="footer__select" onchange="top.location=this.value") 
+              option(value="#") Русский
+              option(value="#") English
+            <svg class="select__icon select__icon--arrow"><use xlink:href="images/sprite.svg#sp-arrow-down"></use></svg>
         p(class="footer__brand-text")
           span(class="footer__brand-tag") #
           span(class="footer__brand-text") UberEats
@@ -23,10 +30,12 @@ footer.footer
         li: a(class="footer__link" href="#") FAQs
 
     div(class="apps")
-      picture(class="apps__image")
-        img(src="images/download-apple.png", alt="Скачайте в Apple Store")
-      picture(class="apps__image")
-        img(src="images/download-google.png", alt="Скачайте в Play Market")
+      a(class="footer__link" href="#")
+        picture(class="apps__image")
+          img(src="images/download-apple.png", alt="Скачайте в Apple Store")
+      a(class="footer__link" href="#")
+        picture(class="apps__image")
+          img(src="images/download-google.png", alt="Скачайте в Play Market")
 
     ul(class="footer__copy")
       li: span(class="footer__copyright") © 2017 Uber Technologies Inc.

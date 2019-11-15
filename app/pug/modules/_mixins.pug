@@ -1,9 +1,8 @@
-mixin store(name, title, price, time)
+mixin store(name, title, time)
   article(class="stores__item store--" + `${name}`)
     div(class="stores__image store--" + `${name}` + "-image")
     h2(class="stores__heading")=title
     p(class="stores__description")
-      span(class="stores__price")=price
       block
-    p(class="stores__time")= time
+    p(class="stores__time")= time + ` мин`
 

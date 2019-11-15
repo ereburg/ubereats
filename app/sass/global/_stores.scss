@@ -11,7 +11,7 @@
 }
 
 .search-form__row {
-  border-bottom: 1px solid $border-input-color;
+  border-bottom: 1px solid $border-color;
 }
 
 .search-form__input {
@@ -19,8 +19,10 @@
   width: 100%;
   color: $text-color-black;
   font-size: $font-regular;
+  line-height: 24px;
   background: none;
   border: none;
+  outline: none;
 }
 
 .search-form__input::placeholder {
@@ -50,6 +52,11 @@
 .stores__item {
   margin-bottom: 16px;
   padding-bottom: 20px;
+
+  &:hover {
+    background: #fafafa;
+    cursor: pointer;
+  }
 }
 
 @include for-size(tablet-portrait-up) {
