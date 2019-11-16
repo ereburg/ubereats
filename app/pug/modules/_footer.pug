@@ -6,10 +6,10 @@ footer.footer
         form(class="footer__form-select select")
           p(class="footer__form-row")
             <svg class="select__icon"><use xlink:href="images/sprite.svg#sp-world"></use></svg>
-            select(class="footer__select" onchange="top.location=this.value") 
+            select(class="footer__select" id="lang" onchange="top.location=this.value") 
               option(value="#") Русский
               option(value="#") English
-            <svg class="select__icon select__icon--arrow"><use xlink:href="images/sprite.svg#sp-arrow-down"></use></svg>
+            label(for="lang") <svg class="select__icon select__icon--arrow"><use xlink:href="images/sprite.svg#sp-arrow-down"></use></svg>
         p(class="footer__brand-text")
           span(class="footer__brand-tag") #
           span(class="footer__brand-text") UberEats

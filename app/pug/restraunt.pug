@@ -2,24 +2,25 @@ extends layouts/_main
 
 block variables
     //- put your vars here
-    - var dimsumKitchen = [{kitchen: "Японская"}, {kitchen: "Японская"}, {kitchen: "Японская"}]
+    - var pageTitle = 'UBER EATS: Restraunt example'
 
 block content
     main.main
         .container
             section(class="main__search search")
                 h2(class="visually-hidden") Найди лучший ресторан!
-                div(class="search-form" action="", method="get")
+                form(class="search-form" action="", method="get")
                     p(class="search-form__row")
                         label(class="search-form__label visually-hidden" for="search-input") Поиск по ресторанам и кухням
-                        input(class="search-form__input" id="search-input" type="text", name="search restraunt" placeholder="Поиск по ресторанам и кухням" autocomplete="off" )
+                        input(class="search-form__input" id="search-input" type="text", name="search restraunt" placeholder="Поиск по ресторанам и кухням")
 
             section(class="main__stores stores")
                 h2(class="stores__title") Рестораны в Москве
                 div(class="stores__wrapper")
                     +store("macdonalds", "Макдоналдс — Газетный", "25 - 35")
                         block kitchen
-                            span(class="stores__price") &#8381;&#8381;
+                            span(class="stores__price") &#8381;
+                            span(class="stores__price") &#8381;
                             span(class="stores__kitchen") Бургеры
                     +store("dimsum", "DimSum & Co — ЦДМ", "40 - 50")
                         block kitchen
@@ -34,11 +35,13 @@ block content
                             span(class="stores__kitchen") Европейская
                     +store("nya", "НЯ — NHA", "30 - 40")
                         block kitchen
-                            span(class="stores__price") &#8381;&#8381;
+                            span(class="stores__price") &#8381;
+                            span(class="stores__price") &#8381;
                             span(class="stores__kitchen") Вьетнамская
                     +store("dzy", "Точка Дзы — Цветной", "40 - 50")
                         block kitchen
-                            span(class="stores__price") &#8381;&#8381;
+                            span(class="stores__price") &#8381;
+                            span(class="stores__price") &#8381;
                             span(class="stores__kitchen") Вьетнамская
                     +store("cinnabon", "Cinnabon", "25 - 35")
                         block kitchen
@@ -48,37 +51,21 @@ block content
                             span(class="stores__kitchen") Капкейки
                     +store("pizzelove", "PIZZELOVE", "15 - 25")
                         block kitchen
-                            span(class="stores__price") &#8381;&#8381;
+                            span(class="stores__price") &#8381;
+                            span(class="stores__price") &#8381;
                             span(class="stores__kitchen") Пицца
                     +store("zu", "Zю кафе — Тверская", "25 - 35")
                         block kitchen
-                            span(class="stores__price") &#8381;&#8381;
+                            span(class="stores__price") &#8381;
+                            span(class="stores__price") &#8381;
                             span(class="stores__kitchen") Японская
                     +store("bar", "Bar BQ Cafe — Манежная", "30 - 40")
                         block kitchen
-                            span(class="stores__price") &#8381;&#8381;&#8381;
+                            span(class="stores__price") &#8381;
+                            span(class="stores__price") &#8381;
+                            span(class="stores__price") &#8381;
                             span(class="stores__kitchen") Европейская
                     
 
 block scripts
     script(src="scripts/scripts.min.js")
-    //- script.
-    //-     function myFilterFunction() {
-    //-         let ul, li, a, txtValue;
-
-    //-         let input = document.querySelector('#search-input');
-    //-         let filter = input.value.toUpperCase();
-    //-         ul = document.querySelector(".stores__wrapper");
-    //-         li = ul.querySelectorAll('.stores__item');
-    //-         console.log(filter);
-    //-         // Loop through all list items, and hide those who don't match the search query
-    //-         for (let i = 0; i < li.length; i++) {
-    //-             a = li[i].querySelectorAll(".stores__heading")[0]; 
-    //-             txtValue = a.textContent || a.innerText; 
-    //-             if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //-                 li[i].style.display = "";
-    //-             } else {
-    //-                 li[i].style.display = "none";
-    //-             }
-    //-         }
-    //-     }

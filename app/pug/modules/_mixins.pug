@@ -1,7 +1,10 @@
 mixin store(name, title, time)
   article(class="stores__item store--" + `${name}`)
-    div(class="stores__image store--" + `${name}` + "-image")
-    h2(class="stores__heading")=title
+    a(class="stores__link" href="restraunt.html", rel="noopener noreferrer")
+      div(class="stores__image store--" + `${name}` + "-image")
+    h2(class="stores__heading") 
+      a(class="stores__link" href="restraunt.html", rel="noopener noreferrer")=title
+     
     p(class="stores__description")
       block
     p(class="stores__time")= time + ` мин`
