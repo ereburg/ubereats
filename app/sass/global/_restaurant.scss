@@ -1,0 +1,110 @@
+.restaurant {
+  min-height: 255px;
+  margin: 0 -8px 112px;
+  padding: 0 8px;
+
+  &--tavern {
+    background: url('../images/restaurant/restraunt-pushkin-phone.jpg') center no-repeat;
+    background-size: cover;
+  }
+}
+
+.restaurant__card {
+  position: relative;
+  top: 131px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 108px;
+  padding: 24px 0;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 0 16px rgba(117, 117, 117, 0.2);
+
+  & .restaurant__description {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+}
+
+.restaurant__name {
+  margin-bottom: 40px;
+}
+
+.restaurant__time--dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 98px;
+  margin: 0 auto;
+  padding: 6px 0px;
+  color: $text-color-white;
+  font-size: 12px;
+  background: $bg-color-footer;
+  border-radius: 16px;
+}
+
+.restaurant-mobile__item {
+  padding-bottom: 40px;
+  color: $text-color-black;
+}
+
+.snacks__title {
+  position: relative;
+  margin-bottom: 56px;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 34px;
+  text-align: center;
+
+  &::after {
+    @include pseudo;
+    bottom: -12px;
+    left: 50%;
+    width: 50px;
+    height: 1px;
+    background: rgb(117, 117, 117);
+    transform: translateX(-50%);
+  }
+}
+
+.snacks__header {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.snacks__additional-text {
+  color: $text-color-gray;
+  font-size: $font-smaller;
+}
+
+.snacks__cost{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.snacks__row {
+  display: flex;
+  justify-content: space-between;
+  max-height: 102px;
+  
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.snacks__text-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.snacks__cost {
+  margin-top: auto;
+}
+
+.snacks__image {
+  max-height: 102px;
+}

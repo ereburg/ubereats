@@ -142,7 +142,7 @@
   line-height: 24px;
 }
 
-.stores__description {
+.restaurant__description {
   display: flex;
   margin: 4px 0;
   color: $text-color-gray;
@@ -151,18 +151,18 @@
   line-height: 21px;
 }
 
-.stores__kitchen {
+.restaurant__kitchen {
   display: inline-block;
   margin-left: 5px;
 }
 
-.stores__kitchen::before {
+.restaurant__kitchen::before {
   display: inline-block;
   margin-right: 5px;
   content: "•";
 }
 
-.stores__time {
+.restaurant__time {
   color: $text-color-black;
   font-weight: normal;
   font-size: $font-smaller;

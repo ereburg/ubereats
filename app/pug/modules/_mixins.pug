@@ -4,8 +4,15 @@ mixin store(name, title, time)
       div(class="stores__image store--" + `${name}` + "-image")
     h2(class="stores__heading") 
       a(class="stores__link" href="restraunt.html", rel="noopener noreferrer")=title
-     
-    div(class="stores__description")
+    div(class="restaurant__description")
       block
-    p(class="stores__time")= time + ` мин`
+    p(class="restaurant__time")= time + ` мин`
 
+mixin menu-item(title, cost, path, altern)
+  li(class="snacks__row")
+    div(class="snacks__text-container")
+      h3(class="snacks__header")= title 
+      block
+      p(class="snacks__cost")= cost
+    picture(class="snacks__image-container")
+      img(class="snacks__image" src="images/restaurant/"+`${path}` alt= altern)

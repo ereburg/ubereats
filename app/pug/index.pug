@@ -1,6 +1,7 @@
 extends layouts/_main
 
 block variables
+    - var pageTitle = 'UBER EATS'
 
 block content
     main.main
@@ -17,63 +18,54 @@ block content
                 div(class="stores__wrapper")
                     +store("macdonalds", "Макдоналдс — Газетный", "25 - 35")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;&#8381;
+                            p(class="restaurant__cost") &#8381;&#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Бургеры
+                                span(class="restaurant__kitchen") Бургеры
                     +store("dimsum", "DimSum & Co — ЦДМ", "40 - 50")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;
+                            p(class="restaurant__cost") &#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Японская
-                                span(class="stores__kitchen") Китайская
-                                span(class="stores__kitchen") Азиатская
+                                span(class="restaurant__kitchen") Японская
+                                span(class="restaurant__kitchen") Китайская
+                                span(class="restaurant__kitchen") Азиатская
                     +store("dvizok", "ДвижОК — Манежная", "35 - 45")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;
+                            p(class="restaurant__cost") &#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Американская 
-                                span(class="stores__kitchen") Европейская
+                                span(class="restaurant__kitchen") Американская 
+                                span(class="restaurant__kitchen") Европейская
                     +store("nya", "НЯ — NHA", "30 - 40")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;&#8381;
+                            p(class="restaurant__cost") &#8381;&#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Вьетнамская
+                                span(class="restaurant__kitchen") Вьетнамская
                     +store("dzy", "Точка Дзы — Цветной", "40 - 50")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;&#8381;
+                            p(class="restaurant__cost") &#8381;&#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Вьетнамская
+                                span(class="restaurant__kitchen") Вьетнамская
                     +store("cinnabon", "Cinnabon", "25 - 35")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;
+                            p(class="restaurant__cost") &#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Выпечка
-                                span(class="stores__kitchen") Десерты
-                                span(class="stores__kitchen") Капкейки
+                                span(class="restaurant__kitchen") Выпечка
+                                span(class="restaurant__kitchen") Десерты
+                                span(class="restaurant__kitchen") Капкейки
                     +store("pizzelove", "PIZZELOVE", "15 - 25")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;&#8381;
+                            p(class="restaurant__cost") &#8381;&#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Пицца
+                                span(class="restaurant__kitchen") Пицца
                     +store("zu", "Zю кафе — Тверская", "25 - 35")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;&#8381;
+                            p(class="restaurant__cost") &#8381;&#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Японская
+                                span(class="restaurant__kitchen") Японская
                     +store("bar", "Bar BQ Cafe — Манежная", "30 - 40")
                         block kitchen
-                            p(class="stores__prices")
-                                span(class="stores__price") &#8381;&#8381;&#8381;
+                            p(class="restaurant__cost") &#8381;&#8381;&#8381;
                             p(class="stores__kitchens")
-                                span(class="stores__kitchen") Европейская
+                                span(class="restaurant__kitchen") Европейская
                     
 block scripts
     script(src="scripts/scripts.min.js")

@@ -2,12 +2,33 @@ extends layouts/_main
 
 block variables
     //- put your vars here
-    - var pageTitle = 'UBER EATS: Restraunt example'
+    - var pageTitle = 'UBER EATS: Tavern Pushkin'
 
 block content
     main.main
         .container
-            section(class="restraunt")
+            section(class="restaurant restaurant--tavern")
+                h2(class="visually-hidden") Трактир «Пушкин»
+                div(class="restaurant__card")
+                    h2(class="restaurant__name") Трактир «Пушкин»
+                    div(class="inner-flex")
+                        div(class="restaurant__description")
+                            p(class="restaurant__cost") &#8381;&#8381;&#8381;
+                            p(class="stores__kitchens")
+                                span(class="restaurant__kitchen") Европейская
+                        p(class="restaurant__time restaurant__time--dark") 40 - 50 мин
+            section(class="restaurant-mobile")
+                div(class="restaurant-mobile__item snacks")
+                    h2(class="snacks__title") Закуски
+                    ul(class="snacks__item")
+                        +menu-item("Сельдь на бородинском хлебе", "240 ₽", "snack-1.jpg", "Сельдь на бородинском хлебе")
+                            block descr
+                                p(class="snacks__additional-text") С яйцом и огурцом
+                        +menu-item("Соленья ассорти", "320 ₽", "snack-2.jpg", "Соленья ассорти")
+                        +menu-item("Грибы маринованные", "300 ₽", "snack-3.jpg", "Грибы маринованные")
+                        +menu-item("Сало домашнее с горчицей", "320 ₽", "snack-4.jpg", "Сало домашнее с горчицей")
+                        +menu-item("Малосольная семга", "390 ₽", "snack-5.jpg", "Малосольная семга")
+                        +menu-item("Язык говяжий с хреном", "350 ₽", "snack-6.jpg", "Язык говяжий с хреном")
                     
 
 block scripts
