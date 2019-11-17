@@ -92,7 +92,8 @@
   color: inherit;
   text-decoration: none;
 
-  &[href]:hover {
+  &[href]:hover,
+  &[href]:focus {
     color: $color-main;
   }
 }
@@ -134,14 +135,17 @@
   margin-bottom: 24px;
 }
 
-.instagram:hover .socials__logo {
+.instagram:hover .socials__logo,
+.instagram:focus .socials__logo {
   background: #a2a2a2;
 }
 
-.twitter:hover .socials__logo {
+.twitter:hover .socials__logo,
+.twitter:focus .socials__logo {
   background: #878787;
 }
 
-.facebook:hover .socials__logo {
+.facebook:hover .socials__logo,
+.facebook:focus .socials__logo {
   background: #646464;
 }

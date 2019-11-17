@@ -54,9 +54,9 @@
   margin-bottom: 16px;
   padding-bottom: 20px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: #fafafa;
-    // cursor: pointer;
   }
 }
 

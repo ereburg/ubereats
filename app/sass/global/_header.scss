@@ -42,15 +42,18 @@
 
 .nav__basket {
   display: none;
+  background: none;
+  border: none;
 
   @include for-size(tablet-portrait-up) {
     display: inline-block;
-    margin-left: 27px;
     margin-right: 10px;
+    margin-left: 27px;
   }
 
   &-icon {
     width: 18.7px;
     height: 21.8px;
+    cursor: pointer;
   }
 }
