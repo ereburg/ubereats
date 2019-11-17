@@ -143,6 +143,7 @@
 }
 
 .stores__description {
+  display: flex;
   margin: 4px 0;
   color: $text-color-gray;
   font-weight: normal;

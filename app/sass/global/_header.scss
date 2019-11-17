@@ -22,6 +22,7 @@
 
 .nav__brand {
   @include flexbox(center);
+  margin-right: auto;
 }
 
 .nav__logo {
@@ -41,4 +42,15 @@
 
 .nav__basket {
   display: none;
+
+  @include for-size(tablet-portrait-up) {
+    display: inline-block;
+    margin-left: 27px;
+    margin-right: 10px;
+  }
+
+  &-icon {
+    width: 18.7px;
+    height: 21.8px;
+  }
 }
