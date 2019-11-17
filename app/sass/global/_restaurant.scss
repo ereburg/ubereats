@@ -4,18 +4,25 @@
   padding: 0 8px;
 
   &--tavern {
-    background: url('../images/restaurant/restraunt-pushkin-phone.jpg') center no-repeat;
+    background: url("../images/restaurant/restraunt-pushkin-phone.jpg") center no-repeat;
     background-size: cover;
   }
 }
+
+.restaurant-mobile {
+  @include for-size(tablet-portrait-up) {
+    display: none;
+  }
+}
+
 
 .restaurant__card {
   position: relative;
   top: 131px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 108px;
   padding: 24px 0;
   text-align: center;
@@ -34,11 +41,11 @@
 
 .restaurant__time--dark {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   max-width: 98px;
   margin: 0 auto;
-  padding: 6px 0px;
+  padding: 6px 0;
   color: $text-color-white;
   font-size: 12px;
   background: $bg-color-footer;
@@ -53,8 +60,8 @@
 .snacks__title {
   position: relative;
   margin-bottom: 56px;
-  font-size: 22px;
   font-weight: normal;
+  font-size: 22px;
   line-height: 34px;
   text-align: center;
 
@@ -70,9 +77,13 @@
 }
 
 .snacks__header {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
   margin-bottom: 4px;
-  font-size: 14px;
   font-weight: normal;
+  font-size: 14px;
   line-height: 24px;
 }
 
@@ -81,30 +92,39 @@
   font-size: $font-smaller;
 }
 
-.snacks__cost{
-  font-size: 15px;
+.snacks__cost {
+  margin-top: auto;
   font-weight: 500;
+  font-size: 15px;
 }
 
 .snacks__row {
   display: flex;
   justify-content: space-between;
   max-height: 102px;
-  
+
+  &:hover,
+  &:focus {
+    background: rgb(249, 249, 249);
+  }
+
   &:not(:last-child) {
     margin-bottom: 16px;
   }
 }
 
-.snacks__text-container{
+.snacks__text-container {
   display: flex;
   flex-direction: column;
-}
-
-.snacks__cost {
-  margin-top: auto;
+  flex-grow: 1;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(227, 227, 227);
 }
 
 .snacks__image {
-  max-height: 102px;
+  min-height: 102px;
+  min-width: 102px;
+  max-width: 108px;
+  max-height: 108px;
+  border-radius: 2px;
 }
