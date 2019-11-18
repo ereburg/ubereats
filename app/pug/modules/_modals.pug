@@ -1,0 +1,14 @@
+div(class="login login--hide")
+  form(class="login__form" action="")
+    h2(class="login__title") Вход в аккаунт
+    p(class="login__row")
+      input(class="login__input" id="name-input" type="text", name="name" placeholder="Введите ваше имя" autocomplete="off" required)
+      small(class="login__descr") Чем оригинальнее - тем лучше!
+    p(class="login__row")
+      input(class="login__input" id="password-input" type="password", name="password" placeholder="Пароль" autocomplete="off" required)
+      small(class="login__descr") Ваш пароль будет надежно сохранен. Спите спокойно.
+    p(class="login__row")
+      label(class="login__label" )
+        input(class="remember-input" type="checkbox", name="remeber") 
+        span(class="label-text") Запомните меня!
+    button(class="button login__button" type="submit") Войти

@@ -1,14 +1,23 @@
 module.exports = function () {
-    $.gulp.task('scripts', () => {
-        return $.gulp.src([ // Берем все необходимые библиотеки
-            './app/scripts/**/*.js',
-            './app/scripts/libs/_lazy.js',
-            './app/scripts/main.js'
+    $.gulp.task('script:libs', () => {
+        return $.gulp.src([
+            './app/scripts/libs/**/*.js',
+            './app/scripts/libs/_lazy.js'
             ])
             .pipe($.plugins.sourcemaps.init())
-            .pipe($.plugins.concat('scripts.min.js')) // Собираем их в кучу в новом файле
+            .pipe($.plugins.concat('libs.min.js')) // Собираем их в кучу в новом файле
             .pipe($.plugins.terser()) // Сжимаем JS файл
             .pipe($.plugins.sourcemaps.write('./')) 
             .pipe($.gulp.dest('./build/scripts'));
     });
+    $.gulp.task('script:custom', () => {
+        return $.gulp.src([
+            './app/scripts/*.js'
+            ])
+            .pipe($.plugins.sourcemaps.init())
+            .pipe($.plugins.terser()) // Сжимаем JS файл
+            .pipe($.plugins.sourcemaps.write('./'))
+            .pipe($.gulp.dest('./build/scripts'));
+    });
+    $.gulp.task('scripts', $.gulp.parallel('script:libs', 'script:custom'));
 };

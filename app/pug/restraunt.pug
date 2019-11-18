@@ -9,60 +9,132 @@ block content
         .container
             section(class="restaurant restaurant--tavern")
                 h2(class="visually-hidden") Трактир «Пушкин»
-                div(class="restaurant__card")
-                    h2(class="restaurant__name") Трактир «Пушкин»
-                    div(class="inner-flex")
-                        div(class="restaurant__description")
-                            p(class="restaurant__cost") &#8381;&#8381;&#8381;
-                            p(class="stores__kitchens")
-                                span(class="restaurant__kitchen") Европейская
-                        p(class="restaurant__time restaurant__time--dark") 40 - 50 мин
-            section(class="restaurant-mobile")
-                div(class="restaurant-mobile__item snacks")
-                    h2(class="snacks__title") Закуски
-                    ul(class="snacks__item")
+                .container-inner
+                    div(class="restaurant__card")
+                        h2(class="restaurant__name") Трактир «Пушкин»
+                        div(class="inner-flex")
+                            div(class="restaurant__description")
+                                p(class="restaurant__cost") &#8381;&#8381;&#8381;
+                                p(class="stores__kitchens")
+                                    span(class="restaurant__kitchen") Европейская
+                            p(class="restaurant__time restaurant__time--dark") 40 - 50 мин
+            
+            //- section(class="restaurant-mobile")
+                div(class="restaurant__item menu")
+                    h2(class="menu__title") Закуски
+                    ul(class="menu__item")
                         +menu-item("Сельдь на бородинском хлебе", "240 ₽", "snack-1.jpg")
                             block descr
-                                p(class="snacks__additional-text") С яйцом и огурцом
+                                p(class="menu__additional-text") С яйцом и огурцом
                         +menu-item("Соленья ассорти", "320 ₽", "snack-2.jpg")
                         +menu-item("Грибы маринованные", "300 ₽", "snack-3.jpg")
                         +menu-item("Сало домашнее с горчицей", "320 ₽", "snack-4.jpg")
                         +menu-item("Малосольная семга", "390 ₽", "snack-5.jpg")
                         +menu-item("Язык говяжий с хреном", "350 ₽", "snack-6.jpg")
-                div(class="restaurant-mobile__item snacks")
-                    h2(class="snacks__title") Салаты
-                    ul(class="snacks__item")
+                div(class="restaurant__item menu")
+                    h2(class="menu__title") Салаты
+                    ul(class="menu__item")
                         +menu-item("Цезарь", "120 ₽", "snack-1.jpg", "Цезарь")
                         +menu-item("Оливье", "320 ₽", "snack-2.jpg")
                         +menu-item("Мимоза", "400 ₽", "snack-3.jpg")
                             block descr
-                                p(class="snacks__additional-text") С оливками и курицей
-                div(class="restaurant-mobile__item snacks")
-                    h2(class="snacks__title") Супы
-                    ul(class="snacks__item")
+                                p(class="menu__additional-text") С оливками и курицей
+                div(class="restaurant__item menu")
+                    h2(class="menu__title") Супы
+                    ul(class="menu__item")
                         +menu-item("Тыквенный суп с филе барабульки", "520 ₽", "snack-1.jpg")
                         +menu-item("Том Ям", "420 ₽", "snack-2.jpg")
                             block descr
-                                p(class="snacks__additional-text") С морепродуктами
+                                p(class="menu__additional-text") С морепродуктами
                         +menu-item("Уха из черноморской кефали", "350 ₽", "snack-3.jpg")
-                div(class="restaurant-mobile__item snacks")
-                    h2(class="snacks__title") Горячие блюда
-                    ul(class="snacks__item")
+                div(class="restaurant__item menu")
+                    h2(class="menu__title") Горячие блюда
+                    ul(class="menu__item")
                         +menu-item("Цыпленок «Табака»", "550 ₽", "snack-3.jpg")
                         +menu-item("Дорадо на гриле", "620 ₽", "snack-4.jpg")
                         +menu-item("Мясной пир", "650 ₽", "snack-5.jpg")
-                div(class="restaurant-mobile__item snacks")
-                    h2(class="snacks__title") Гарниры
-                    ul(class="snacks__item")
+                div(class="restaurant__item menu")
+                    h2(class="menu__title") Гарниры
+                    ul(class="menu__item")
                         +menu-item("Картофельное пюре", "100 ₽", "snack-3.jpg")
                         +menu-item("Рис", "120 ₽", "snack-4.jpg")
                         +menu-item("Картофель фри", "190 ₽", "snack-5.jpg")
-                div(class="restaurant-mobile__item snacks")
-                    h2(class="snacks__title") Десерты
-                    ul(class="snacks__item")
+                div(class="restaurant__item menu")
+                    h2(class="menu__title") Десерты
+                    ul(class="menu__item")
                         +menu-item("Торт «Наполеон»", "320 ₽", "snack-3.jpg")
                         +menu-item("Рахат-Лукум", "280 ₽", "snack-4.jpg")
                         +menu-item("Ром-баба", "410 ₽", "snack-5.jpg")
+            
             section(class="restaurant-desktop")
+                div(class="tablist-buttons")
+                    button(class="restaurant__button tab-button active" type="button" data-tab="1") Закуски
+                    button(class="restaurant__button tab-button" type="button" data-tab="2") Салаты
+                    button(class="restaurant__button tab-button" type="button" data-tab="3") Супы
+                    button(class="restaurant__button tab-button" type="button" data-tab="4") Горячие блюда
+                    button(class="restaurant__button tab-button" type="button" data-tab="5") Гарниры
+                    button(class="restaurant__button tab-button" type="button" data-tab="6") Десерты
+                div(class="tablist-contents")
+                    div(class="restaurant__item tabcontent menu active" id="snacks" data-tab="1")
+                        h2(class="menu__title") Закуски
+                        ul(class="menu__item")
+                            +menu-item("Сельдь на бородинском хлебе", "240 ₽", "snack-1.jpg")
+                                block descr
+                                    p(class="menu__additional-text") С яйцом и огурцом
+                            +menu-item("Соленья ассорти", "320 ₽", "snack-2.jpg")
+                            +menu-item("Грибы маринованные", "300 ₽", "snack-3.jpg")
+                            +menu-item("Сало домашнее с горчицей", "320 ₽", "snack-4.jpg")
+                            +menu-item("Малосольная семга", "390 ₽", "snack-5.jpg")
+                            +menu-item("Язык говяжий с хреном", "350 ₽", "snack-6.jpg")
+                    div(class="restaurant__item tabcontent menu" id="salad" data-tab="2")
+                        h2(class="menu__title") Салаты
+                        ul(class="menu__item")
+                            +menu-item("Цезарь", "120 ₽", "snack-1.jpg", "Цезарь")
+                            +menu-item("Оливье", "320 ₽", "snack-2.jpg")
+                            +menu-item("Крабовый", "420 ₽", "snack-6.jpg")
+                            +menu-item("Мимоза", "400 ₽", "snack-3.jpg")
+                                block descr
+                                    p(class="menu__additional-text") С оливками и курицей
+                    div(class="restaurant__item tabcontent menu" id="soup" data-tab="3")
+                        h2(class="menu__title") Супы
+                        ul(class="menu__item")
+                            +menu-item("Тыквенный суп с филе барабульки", "520 ₽", "snack-1.jpg")
+                            +menu-item("Том Ям", "420 ₽", "snack-2.jpg")
+                                block descr
+                                    p(class="menu__additional-text") С морепродуктами
+                            +menu-item("Уха из черноморской кефали", "350 ₽", "snack-3.jpg")
+                            +menu-item("Гороховый суп с сухариками", "320 ₽", "snack-5.jpg")
+                    div(class="restaurant__item tabcontent menu" id="hotmeal" data-tab="4")
+                        h2(class="menu__title") Горячие блюда
+                        ul(class="menu__item")
+                            +menu-item("Цыпленок «Табака»", "550 ₽", "snack-3.jpg")
+                            +menu-item("Дорадо на гриле", "620 ₽", "snack-4.jpg")
+                            +menu-item("Цыпленок «Табака»", "550 ₽", "snack-3.jpg")
+                            +menu-item("Дорадо на гриле", "620 ₽", "snack-4.jpg")
+                            +menu-item("Мясной пир", "650 ₽", "snack-5.jpg")
+                            +menu-item("Мясной пир", "650 ₽", "snack-5.jpg")
+                    div(class="restaurant__item tabcontent menu" id="garnish" data-tab="5")
+                        h2(class="menu__title") Гарниры
+                        ul(class="menu__item")
+                            +menu-item("Картофельное пюре", "100 ₽", "snack-3.jpg")
+                            +menu-item("Рис", "120 ₽", "snack-4.jpg")
+                            +menu-item("Картофель фри", "190 ₽", "snack-5.jpg")
+                            +menu-item("Картофельное пюре", "100 ₽", "snack-3.jpg")
+                            +menu-item("Рис", "120 ₽", "snack-4.jpg")
+                            +menu-item("Картофельное пюре", "100 ₽", "snack-3.jpg")
+                    div(class="restaurant__item tabcontent menu" id="desert" data-tab="6")
+                        h2(class="menu__title") Десерты
+                        ul(class="menu__item")
+                            +menu-item("Торт «Наполеон»", "320 ₽", "snack-3.jpg")
+                            +menu-item("Рахат-Лукум", "280 ₽", "snack-4.jpg")
+                            +menu-item("Ром-баба", "410 ₽", "snack-5.jpg")
+                            +menu-item("Торт «Наполеон»", "320 ₽", "snack-3.jpg")
+                            +menu-item("Рахат-Лукум", "280 ₽", "snack-4.jpg")
+                            +menu-item("Ром-баба", "410 ₽", "snack-5.jpg")
+                            +menu-item("Торт «Наполеон»", "320 ₽", "snack-3.jpg")
+                            +menu-item("Рахат-Лукум", "280 ₽", "snack-1.jpg")
+                            +menu-item("Ром-баба", "410 ₽", "snack-4.jpg")
+                            +menu-item("Ром-баба", "410 ₽", "snack-2.jpg")
+
 block scripts
-    script(src="scripts/scripts.min.js")
+    script(src="scripts/tabs.js")

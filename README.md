@@ -1,2 +1,2 @@
 # UberEats
-E-commerce platform for searching restraunts and kitchens in Moscow. Test Project.
+E-commerce platform for searching restraunts in Moscow. Test Project. Native JS, HTML5 and CSS3.

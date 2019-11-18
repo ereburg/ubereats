@@ -9,10 +9,10 @@ mixin store(name, title, time)
     p(class="restaurant__time")= time + ` мин`
 
 mixin menu-item(title, cost, path)
-  li(class="snacks__row")
-    div(class="snacks__text-container")
-      h3(class="snacks__header")= title 
+  li(class="menu__row")
+    div(class="menu__text-container")
+      h3(class="menu__header")= title 
       block
-      p(class="snacks__cost")= cost
-    picture(class="snacks__image-container")
-      img(class="snacks__image" src="images/restaurant/"+`${path}` alt= title)
+      p(class="menu__cost")= cost
+    picture(class="menu__image-container")
+      img(class="menu__image" src="images/restaurant/"+`${path}` alt= title)

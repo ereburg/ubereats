@@ -112,6 +112,10 @@
 }
 
 .apps__image {
+  max-height: 40px;
+  height: 100%;
+  max-width: 130px;
+  width: 100%;
   margin: 0 12px;
 
   @include for-size(tablet-portrait-up) {

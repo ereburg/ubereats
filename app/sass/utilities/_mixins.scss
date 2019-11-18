@@ -32,6 +32,12 @@
     }
   }
 
+  @else if $size == medium {
+    @media (min-width: 740px) {
+      @content;
+    }
+  }
+
   @else if $size == tablet-landscape-up {
     @media (min-width: 945px) {
       @content;

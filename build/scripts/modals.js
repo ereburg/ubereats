@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".page"),t=document.querySelector(".authorization__button"),o=document.querySelector(".login"),n=document.querySelector(".login__form"),c=()=>{e.classList.toggle("page--modal")},l=()=>{o.classList.toggle("login--hide")};t.addEventListener("click",e=>{e.preventDefault(e),c(),l()}),o.addEventListener("click",t=>{let o=t.target==n,a=e.classList.contains("page--modal");!o&&a&&(c(),l())})});
+//# sourceMappingURL=modals.js.map

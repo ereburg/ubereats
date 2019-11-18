@@ -1,0 +1,21 @@
+.page--modal {
+  overflow: hidden;
+}
+
+.login--hide {
+  display: none;
+}
+
+.tab-button.active {
+  color: #327430;
+}
+
+.tabcontent {
+  @include for-size(tablet-portrait-up) {
+    display: none;
+  }
+}
+
+.tabcontent.active {
+  display: block;
+}

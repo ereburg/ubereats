@@ -1,5 +1,6 @@
 .main {
   padding: 0 8px;
+  overflow: hidden;
 
   @include for-size(desktop-up) {
     padding: 0 81px;
