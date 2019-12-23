@@ -42,6 +42,12 @@ button {
   max-width: 1124px;
 }
 
+.added {
+  color: $text-color-gray;
+  font-size: $font-smaller;
+  line-height: 1.4;
+}
+
 // Удаляем все анимации и переходы для людей, которые предпочитай их не использовать
 @media (prefers-reduced-motion: reduce) {
   * {

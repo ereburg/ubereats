@@ -1,25 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-	
+
 	// Фильтрация по кухням и названию ресторана
 	let input = document.querySelector('#search-input');
-	
-	input.addEventListener('keyup', () => {
-		let filter, wrapper, store, name, kitchen, txtValue;
-		filter = input.value.toUpperCase();
-		wrapper = document.querySelector(".stores__wrapper");
+	const wrapper = document.querySelector(".stores__wrapper"),
 		store = wrapper.querySelectorAll('.stores__item');
-		
+
+	function check() {
+		let counter = 0;
+		let p = document.createElement('p');
+		p.classList.add('added');
+		p.textContent = 'Мы очень старались, но так ничего и не нашли... Но зато вы можете взять Евгения на работу :)';
+
+		store.forEach(e => {
+			if (e.hasAttribute('hidden', '')) {
+				counter++;
+			}
+		});
+
+		let newEl = document.querySelector('.added');
+
+		if (counter < 9 && wrapper.contains(newEl)) {
+			newEl.remove();
+		}
+		else if (counter >= 9 && !wrapper.contains(newEl)) {
+			wrapper.append(p);
+		}
+	}
+
+	input.addEventListener('keyup', () => {
+		let filter, name, kitchen;
+		filter = input.value.toUpperCase();
+
 		for (let i = 0; i < store.length; i++) {
-			name = store[i].querySelectorAll(".stores__heading")[0];
-			kitchen = store[i].querySelectorAll(".stores__kitchens")[0]; 
-			txtValue = name.textContent || name.innerText;
-			txtValue2 = kitchen.textContent || kitchen.innerText;
-			if (txtValue.toUpperCase().indexOf(filter) > -1) {
-				store[i].style.display = "";
-			} else if (txtValue2.toUpperCase().indexOf(filter) > -1) {
-				store[i].style.display = "";
+			name = store[i].querySelector(".stores__heading");
+			kitchen = store[i].querySelector(".stores__kitchens");
+			const storeText = name.textContent || name.innerText,
+				kitchenText = kitchen.textContent || kitchen.innerText,
+				checkStore = storeText.toUpperCase().indexOf(filter) > -1,
+				checkKitchen = kitchenText.toUpperCase().indexOf(filter) > -1;
+
+			if (checkStore || checkKitchen) {
+				store[i].removeAttribute('hidden', '');
+				check();
 			} else {
-				store[i].style.display = "none";
+				store[i].setAttribute('hidden', '');
+				check();
 			}
 		}
 	});
