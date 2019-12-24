@@ -3,10 +3,13 @@
   top: 0;
   z-index: 90;
   background: #ffffff;
-  box-shadow: 0 0 16px rgba($color: #262626, $alpha: 0.16);
 
   @include for-size(desktop-up) {
     padding: 0 81px;
+  }
+
+  &.scroll {
+    box-shadow: 0 0 16px rgba($color: #262626, $alpha: 0.16);
   }
 }
 

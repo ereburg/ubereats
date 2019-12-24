@@ -30,4 +30,38 @@ document.addEventListener("DOMContentLoaded", () => {
       loginModalToggle();
     }
   });
+
+  // User Name
+  const inputName = document.querySelector('#name-input');
+  const loginButton = document.querySelector('.login__button');
+  let inputText = '';
+  const checkbox = document.querySelector('.remember-input');
+
+  inputName.addEventListener('keyup', () => {
+    inputText = inputName.value;
+  });
+
+  loginButton.addEventListener('click', () => {
+    localStorage.setItem('username', inputText);
+  });
+
+  if (localStorage.getItem('username')) {
+    let username = `Привет, ${localStorage.getItem('username')}`;
+    authBtn.textContent = username;
+  }
+
+  // Add class to header on scroll
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    let y = window.pageYOffset;
+
+    if (y > 1) {
+      header.classList.add('scroll');
+    } else {
+      header.classList.remove('scroll');
+    }
+  });
+
+
 });
