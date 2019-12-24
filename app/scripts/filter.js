@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		let newEl = document.querySelector('.added');
 
-		if (counter < 9 && wrapper.contains(newEl)) {
+		if (counter < store.length && wrapper.contains(newEl)) {
 			newEl.remove();
 		}
-		else if (counter >= 9 && !wrapper.contains(newEl)) {
+		else if (counter >= store.length && !wrapper.contains(newEl)) {
 			wrapper.append(p);
 		}
 	}
