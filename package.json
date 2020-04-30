@@ -1,6 +1,6 @@
 {
   "name": "ubereats",
-  "version": "1.0",
+  "version": "1.01",
   "description": "Ubereats - e-commerce platform for searching restaurants in Moscow. Test Project.",
   "main": "gulpfile.js",
   "repository": {
