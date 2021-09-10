@@ -1,6 +1,7 @@
 {
+  "private": true,
   "name": "ubereats",
-  "version": "1.01",
+  "version": "1.1.0",
   "description": "Ubereats - e-commerce platform for searching restaurants in Moscow. Test Project.",
   "main": "gulpfile.js",
   "repository": {
@@ -10,21 +11,7 @@
   "scripts": {
     "style:lint": "stylelint 'app/sass/**/*.scss' --syntax scss",
     "style:fix": "stylelint 'app/sass/**/*.scss' --syntax scss --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "gulpplugin",
-    "purgecss",
-    "image",
-    "terser",
-    "sass",
-    "minify",
-    "compress",
-    "png",
-    "jpg",
-    "jpeg",
-    "svg"
-  ],
   "author": {
     "name": "Eugene Kotsarev",
     "email": "eugene.kotsarev@gmail.com"
@@ -32,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
